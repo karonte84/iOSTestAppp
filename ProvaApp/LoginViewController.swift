@@ -52,7 +52,7 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let homeVC = segue.destination as? HomeViewController {
+        if let tabVC = segue.destination as? UITabBarController, let navigationVC = tabVC.viewControllers?.first as? UINavigationController, let homeVC = navigationVC.viewControllers.first as? HomeViewController {
             if let emailText = emailTextField.text {
                 homeVC.email = emailText
             }
