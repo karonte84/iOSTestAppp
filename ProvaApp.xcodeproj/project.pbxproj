@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3449576C27ABCFFE0074605A /* PersonListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449576B27ABCFFE0074605A /* PersonListTableViewCell.swift */; };
+		3449576F27ABD7220074605A /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449576E27ABD7220074605A /* AlbumTableViewCell.swift */; };
+		3449577127ABD74A0074605A /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577027ABD74A0074605A /* AlbumListViewController.swift */; };
+		3449577427ABE42A0074605A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577327ABE42A0074605A /* Extensions.swift */; };
+		3449577727ABE53C0074605A /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577627ABE53C0074605A /* GalleryViewController.swift */; };
+		3449577927ABE5F90074605A /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577827ABE5F90074605A /* GalleryCollectionViewCell.swift */; };
+		3449577C27ABF1310074605A /* LibriCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577B27ABF1310074605A /* LibriCollectionViewCell.swift */; };
+		3449577E27ABF1450074605A /* ListaLibriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577D27ABF1450074605A /* ListaLibriViewController.swift */; };
+		3449578027ABF1540074605A /* DettaglioLibroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577F27ABF1540074605A /* DettaglioLibroViewController.swift */; };
 		349575A027A7D538005F7F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495759F27A7D538005F7F80 /* AppDelegate.swift */; };
 		349575A227A7D538005F7F80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349575A127A7D538005F7F80 /* SceneDelegate.swift */; };
 		349575A427A7D538005F7F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349575A327A7D538005F7F80 /* ViewController.swift */; };
@@ -19,6 +28,7 @@
 		34F55FAC27AA77D400CE647E /* OutletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F55FAB27AA77D400CE647E /* OutletViewController.swift */; };
 		34F55FAE27AA82CD00CE647E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F55FAD27AA82CD00CE647E /* LoginViewController.swift */; };
 		34F55FB027AA8D6300CE647E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F55FAF27AA8D6300CE647E /* HomeViewController.swift */; };
+		34F55FB727ABCE3F00CE647E /* PersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F55FB627ABCE3F00CE647E /* PersonListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +49,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3449576B27ABCFFE0074605A /* PersonListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListTableViewCell.swift; sourceTree = "<group>"; };
+		3449576E27ABD7220074605A /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
+		3449577027ABD74A0074605A /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
+		3449577327ABE42A0074605A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3449577627ABE53C0074605A /* GalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		3449577827ABE5F90074605A /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		3449577B27ABF1310074605A /* LibriCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibriCollectionViewCell.swift; sourceTree = "<group>"; };
+		3449577D27ABF1450074605A /* ListaLibriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaLibriViewController.swift; sourceTree = "<group>"; };
+		3449577F27ABF1540074605A /* DettaglioLibroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DettaglioLibroViewController.swift; sourceTree = "<group>"; };
 		3495759C27A7D538005F7F80 /* ProvaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3495759F27A7D538005F7F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349575A127A7D538005F7F80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +74,7 @@
 		34F55FAB27AA77D400CE647E /* OutletViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutletViewController.swift; sourceTree = "<group>"; };
 		34F55FAD27AA82CD00CE647E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		34F55FAF27AA8D6300CE647E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		34F55FB627ABCE3F00CE647E /* PersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +102,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3449576D27ABD5DC0074605A /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				3449576E27ABD7220074605A /* AlbumTableViewCell.swift */,
+				3449577027ABD74A0074605A /* AlbumListViewController.swift */,
+			);
+			path = AlbumList;
+			sourceTree = "<group>";
+		};
+		3449577227ABE41A0074605A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3449577327ABE42A0074605A /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3449577527ABE52F0074605A /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				3449577627ABE53C0074605A /* GalleryViewController.swift */,
+				3449577827ABE5F90074605A /* GalleryCollectionViewCell.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		3449577A27ABEDBF0074605A /* Libri */ = {
+			isa = PBXGroup;
+			children = (
+				3449577B27ABF1310074605A /* LibriCollectionViewCell.swift */,
+				3449577D27ABF1450074605A /* ListaLibriViewController.swift */,
+				3449577F27ABF1540074605A /* DettaglioLibroViewController.swift */,
+			);
+			path = Libri;
+			sourceTree = "<group>";
+		};
 		3495759327A7D538005F7F80 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +161,11 @@
 		3495759E27A7D538005F7F80 /* ProvaApp */ = {
 			isa = PBXGroup;
 			children = (
+				3449577A27ABEDBF0074605A /* Libri */,
+				3449577527ABE52F0074605A /* Gallery */,
+				3449577227ABE41A0074605A /* Utils */,
+				3449576D27ABD5DC0074605A /* AlbumList */,
+				34F55FB527ABCD9200CE647E /* PersonList */,
 				3495759F27A7D538005F7F80 /* AppDelegate.swift */,
 				349575A127A7D538005F7F80 /* SceneDelegate.swift */,
 				349575A327A7D538005F7F80 /* ViewController.swift */,
@@ -134,6 +195,15 @@
 				349575C227A7D544005F7F80 /* ProvaAppUITestsLaunchTests.swift */,
 			);
 			path = ProvaAppUITests;
+			sourceTree = "<group>";
+		};
+		34F55FB527ABCD9200CE647E /* PersonList */ = {
+			isa = PBXGroup;
+			children = (
+				34F55FB627ABCE3F00CE647E /* PersonListViewController.swift */,
+				3449576B27ABCFFE0074605A /* PersonListTableViewCell.swift */,
+			);
+			path = PersonList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,10 +338,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				349575A427A7D538005F7F80 /* ViewController.swift in Sources */,
+				3449577C27ABF1310074605A /* LibriCollectionViewCell.swift in Sources */,
 				34F55FAC27AA77D400CE647E /* OutletViewController.swift in Sources */,
+				34F55FB727ABCE3F00CE647E /* PersonListViewController.swift in Sources */,
+				3449577E27ABF1450074605A /* ListaLibriViewController.swift in Sources */,
+				3449578027ABF1540074605A /* DettaglioLibroViewController.swift in Sources */,
 				349575A027A7D538005F7F80 /* AppDelegate.swift in Sources */,
+				3449577127ABD74A0074605A /* AlbumListViewController.swift in Sources */,
 				34F55FAE27AA82CD00CE647E /* LoginViewController.swift in Sources */,
+				3449576F27ABD7220074605A /* AlbumTableViewCell.swift in Sources */,
 				349575A227A7D538005F7F80 /* SceneDelegate.swift in Sources */,
+				3449576C27ABCFFE0074605A /* PersonListTableViewCell.swift in Sources */,
+				3449577727ABE53C0074605A /* GalleryViewController.swift in Sources */,
+				3449577427ABE42A0074605A /* Extensions.swift in Sources */,
+				3449577927ABE5F90074605A /* GalleryCollectionViewCell.swift in Sources */,
 				34F55FB027AA8D6300CE647E /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
