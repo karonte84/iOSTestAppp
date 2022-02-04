@@ -9,9 +9,11 @@ import UIKit
 
 class GalleryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var label: UILabel!
     
-    func setData(_ url: String) {
-        if let url = URL(string: url) {
+    func setData(_ photo: Photo) {
+        label.text = photo.title
+        if let url = URL(string: photo.thumbnailUrl) {
             imageView.load(from: url)
         }
     }

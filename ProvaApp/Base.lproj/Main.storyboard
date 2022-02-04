@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lUu-RU-Ok8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b0k-TJ-dm3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -332,40 +333,57 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GalleryCollectionViewCell" id="dUw-uA-bjx" customClass="GalleryCollectionViewCell" customModule="ProvaApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="58" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LM6-mu-Fb2">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="58" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5q-ac-CV0">
+                                                    <rect key="frame" x="8" y="107" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zDA-ig-4aF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="58" height="102"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="zDA-ig-4aF" secondAttribute="trailing" id="0mx-z4-kjq"/>
                                                 <constraint firstItem="zDA-ig-4aF" firstAttribute="leading" secondItem="LM6-mu-Fb2" secondAttribute="leading" id="1Ws-le-qo0"/>
-                                                <constraint firstAttribute="bottom" secondItem="zDA-ig-4aF" secondAttribute="bottom" id="8Z3-oq-QAi"/>
+                                                <constraint firstAttribute="trailing" secondItem="k5q-ac-CV0" secondAttribute="trailing" constant="8" id="QmX-gA-MZ7"/>
                                                 <constraint firstItem="zDA-ig-4aF" firstAttribute="top" secondItem="LM6-mu-Fb2" secondAttribute="top" id="b9j-bu-MSo"/>
+                                                <constraint firstItem="k5q-ac-CV0" firstAttribute="leading" secondItem="LM6-mu-Fb2" secondAttribute="leading" constant="8" id="g28-rg-lYH"/>
+                                                <constraint firstAttribute="bottom" secondItem="k5q-ac-CV0" secondAttribute="bottom" id="krV-r5-wie"/>
+                                                <constraint firstItem="k5q-ac-CV0" firstAttribute="top" secondItem="zDA-ig-4aF" secondAttribute="bottom" constant="5" id="vDI-5z-FUs"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <connections>
                                             <outlet property="imageView" destination="zDA-ig-4aF" id="niS-ym-YEP"/>
+                                            <outlet property="label" destination="k5q-ac-CV0" id="JrQ-uF-tmv"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Tvy-lO-dLK">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <color key="color" name="AccentColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H1t-sr-HpT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Tvy-lO-dLK" firstAttribute="centerX" secondItem="LFj-DA-MM9" secondAttribute="centerX" id="O1G-bU-xbS"/>
                             <constraint firstItem="LFj-DA-MM9" firstAttribute="top" secondItem="H1t-sr-HpT" secondAttribute="top" id="VJr-tE-fwC"/>
                             <constraint firstItem="LFj-DA-MM9" firstAttribute="leading" secondItem="H1t-sr-HpT" secondAttribute="leading" id="Yb1-8X-xbg"/>
                             <constraint firstItem="H1t-sr-HpT" firstAttribute="bottom" secondItem="LFj-DA-MM9" secondAttribute="bottom" id="lOu-mm-b8i"/>
+                            <constraint firstItem="Tvy-lO-dLK" firstAttribute="centerY" secondItem="LFj-DA-MM9" secondAttribute="centerY" id="nDy-gg-X0u"/>
                             <constraint firstItem="H1t-sr-HpT" firstAttribute="trailing" secondItem="LFj-DA-MM9" secondAttribute="trailing" id="oSu-qS-47M"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Tvy-lO-dLK" id="psI-V5-p9o"/>
                         <outlet property="collectionView" destination="LFj-DA-MM9" id="gDF-La-Hqf"/>
                     </connections>
                 </viewController>
@@ -798,6 +816,9 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

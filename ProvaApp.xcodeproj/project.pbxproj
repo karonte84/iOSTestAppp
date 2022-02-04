@@ -16,6 +16,11 @@
 		3449577C27ABF1310074605A /* LibriCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577B27ABF1310074605A /* LibriCollectionViewCell.swift */; };
 		3449577E27ABF1450074605A /* ListaLibriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577D27ABF1450074605A /* ListaLibriViewController.swift */; };
 		3449578027ABF1540074605A /* DettaglioLibroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449577F27ABF1540074605A /* DettaglioLibroViewController.swift */; };
+		3449578227AD1CB80074605A /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449578127AD1CB80074605A /* APIRequest.swift */; };
+		3449578427AD1D8C0074605A /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449578327AD1D8C0074605A /* Photo.swift */; };
+		3449578927AD23E40074605A /* PhotoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449578827AD23E40074605A /* PhotoRepository.swift */; };
+		3449578B27AD25520074605A /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449578A27AD25520074605A /* Observable.swift */; };
+		3449578D27AD25870074605A /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3449578C27AD25870074605A /* GalleryViewModel.swift */; };
 		349575A027A7D538005F7F80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495759F27A7D538005F7F80 /* AppDelegate.swift */; };
 		349575A227A7D538005F7F80 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349575A127A7D538005F7F80 /* SceneDelegate.swift */; };
 		349575A427A7D538005F7F80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349575A327A7D538005F7F80 /* ViewController.swift */; };
@@ -58,6 +63,11 @@
 		3449577B27ABF1310074605A /* LibriCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibriCollectionViewCell.swift; sourceTree = "<group>"; };
 		3449577D27ABF1450074605A /* ListaLibriViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaLibriViewController.swift; sourceTree = "<group>"; };
 		3449577F27ABF1540074605A /* DettaglioLibroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DettaglioLibroViewController.swift; sourceTree = "<group>"; };
+		3449578127AD1CB80074605A /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		3449578327AD1D8C0074605A /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		3449578827AD23E40074605A /* PhotoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRepository.swift; sourceTree = "<group>"; };
+		3449578A27AD25520074605A /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		3449578C27AD25870074605A /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		3495759C27A7D538005F7F80 /* ProvaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3495759F27A7D538005F7F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349575A127A7D538005F7F80 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +124,7 @@
 		3449577227ABE41A0074605A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3449578A27AD25520074605A /* Observable.swift */,
 				3449577327ABE42A0074605A /* Extensions.swift */,
 			);
 			path = Utils;
@@ -124,6 +135,7 @@
 			children = (
 				3449577627ABE53C0074605A /* GalleryViewController.swift */,
 				3449577827ABE5F90074605A /* GalleryCollectionViewCell.swift */,
+				3449578C27AD25870074605A /* GalleryViewModel.swift */,
 			);
 			path = Gallery;
 			sourceTree = "<group>";
@@ -136,6 +148,37 @@
 				3449577F27ABF1540074605A /* DettaglioLibroViewController.swift */,
 			);
 			path = Libri;
+			sourceTree = "<group>";
+		};
+		3449578527AD23120074605A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3449578127AD1CB80074605A /* APIRequest.swift */,
+				3449578327AD1D8C0074605A /* Photo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3449578627AD23260074605A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3449577527ABE52F0074605A /* Gallery */,
+				3449576D27ABD5DC0074605A /* AlbumList */,
+				34F55FB527ABCD9200CE647E /* PersonList */,
+				34F55FAB27AA77D400CE647E /* OutletViewController.swift */,
+				349575A327A7D538005F7F80 /* ViewController.swift */,
+				34F55FAD27AA82CD00CE647E /* LoginViewController.swift */,
+				34F55FAF27AA8D6300CE647E /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3449578727AD23BF0074605A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				3449578827AD23E40074605A /* PhotoRepository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		3495759327A7D538005F7F80 = {
@@ -161,21 +204,17 @@
 		3495759E27A7D538005F7F80 /* ProvaApp */ = {
 			isa = PBXGroup;
 			children = (
+				3449578727AD23BF0074605A /* Repository */,
+				3449578627AD23260074605A /* View */,
+				3449578527AD23120074605A /* Model */,
 				3449577A27ABEDBF0074605A /* Libri */,
-				3449577527ABE52F0074605A /* Gallery */,
 				3449577227ABE41A0074605A /* Utils */,
-				3449576D27ABD5DC0074605A /* AlbumList */,
-				34F55FB527ABCD9200CE647E /* PersonList */,
 				3495759F27A7D538005F7F80 /* AppDelegate.swift */,
 				349575A127A7D538005F7F80 /* SceneDelegate.swift */,
-				349575A327A7D538005F7F80 /* ViewController.swift */,
 				349575A527A7D538005F7F80 /* Main.storyboard */,
 				349575A827A7D543005F7F80 /* Assets.xcassets */,
 				349575AA27A7D543005F7F80 /* LaunchScreen.storyboard */,
 				349575AD27A7D543005F7F80 /* Info.plist */,
-				34F55FAB27AA77D400CE647E /* OutletViewController.swift */,
-				34F55FAD27AA82CD00CE647E /* LoginViewController.swift */,
-				34F55FAF27AA8D6300CE647E /* HomeViewController.swift */,
 			);
 			path = ProvaApp;
 			sourceTree = "<group>";
@@ -338,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				349575A427A7D538005F7F80 /* ViewController.swift in Sources */,
+				3449578D27AD25870074605A /* GalleryViewModel.swift in Sources */,
 				3449577C27ABF1310074605A /* LibriCollectionViewCell.swift in Sources */,
 				34F55FAC27AA77D400CE647E /* OutletViewController.swift in Sources */,
 				34F55FB727ABCE3F00CE647E /* PersonListViewController.swift in Sources */,
@@ -347,10 +387,14 @@
 				3449577127ABD74A0074605A /* AlbumListViewController.swift in Sources */,
 				34F55FAE27AA82CD00CE647E /* LoginViewController.swift in Sources */,
 				3449576F27ABD7220074605A /* AlbumTableViewCell.swift in Sources */,
+				3449578927AD23E40074605A /* PhotoRepository.swift in Sources */,
 				349575A227A7D538005F7F80 /* SceneDelegate.swift in Sources */,
 				3449576C27ABCFFE0074605A /* PersonListTableViewCell.swift in Sources */,
+				3449578427AD1D8C0074605A /* Photo.swift in Sources */,
 				3449577727ABE53C0074605A /* GalleryViewController.swift in Sources */,
 				3449577427ABE42A0074605A /* Extensions.swift in Sources */,
+				3449578B27AD25520074605A /* Observable.swift in Sources */,
+				3449578227AD1CB80074605A /* APIRequest.swift in Sources */,
 				3449577927ABE5F90074605A /* GalleryCollectionViewCell.swift in Sources */,
 				34F55FB027AA8D6300CE647E /* HomeViewController.swift in Sources */,
 			);

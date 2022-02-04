@@ -9,17 +9,12 @@ import UIKit
 
 class GalleryViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    private let data: [String] = [
-            "https://www.spagna.info/wp-content/uploads/sites/39/playa-esmeralda-fuerteventura.jpg",
-            "https://www.costacrociere.it/content/dam/costa/costa-magazine/articles-magazine/islands/hawaii-island/hawaii_m.jpg.image.694.390.low.jpg",
-            "https://www.spagna.info/wp-content/uploads/sites/39/playa-esmeralda-fuerteventura.jpg",
-            "https://www.costacrociere.it/content/dam/costa/costa-magazine/articles-magazine/islands/hawaii-island/hawaii_m.jpg.image.694.390.low.jpg",
-            "https://www.spagna.info/wp-content/uploads/sites/39/playa-esmeralda-fuerteventura.jpg",
-            "https://www.costacrociere.it/content/dam/costa/costa-magazine/articles-magazine/islands/hawaii-island/hawaii_m.jpg.image.694.390.low.jpg",
-            "https://www.spagna.info/wp-content/uploads/sites/39/playa-esmeralda-fuerteventura.jpg",
-            "https://www.costacrociere.it/content/dam/costa/costa-magazine/articles-magazine/islands/hawaii-island/hawaii_m.jpg.image.694.390.low.jpg"
-        ]
+    var photos : [Photo] = []
+    
+    private let apiRequest = APIRequest<[Photo]>(urlString: "https://jsonplaceholder.typicode.com/photos")
+    private let viewModel : GalleryViewModel = GalleryViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +28,29 @@ class GalleryViewController: UIViewController {
         layout.minimumInteritemSpacing = 4
         
         collectionView.setCollectionViewLayout(layout, animated: true)
-
         // Do any additional setup after loading the view.
+        
+        setupObservers()
+        viewModel.getPhotos()
+    }
+    
+    private func setupObservers() {
+        viewModel.isLoading.observe(on: self, observerBlock: { isLoading in
+            if isLoading {
+                self.activityIndicator.startAnimating()
+            } else {
+                self.activityIndicator.stopAnimating()
+            }
+        })
+        viewModel.error.observe(on: self, observerBlock: { error in
+            if let errorUnwrapped = error {
+                print(errorUnwrapped)
+            }
+        })
+        viewModel.response.observe(on: self, observerBlock: {photos in
+            self.photos.append(contentsOf: photos)
+            self.collectionView.reloadData()
+        })
     }
     
 
@@ -52,12 +68,12 @@ class GalleryViewController: UIViewController {
 
 extension GalleryViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GalleryCollectionViewCell", for: indexPath) as? GalleryCollectionViewCell
-        cell?.setData(data[indexPath.row])
+        cell?.setData(photos[indexPath.row])
         return cell!
     }
 }
